@@ -17,4 +17,12 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/admin', 'HomeController@index')->name('admin');
+Route::get('/admin', 'AdminController@index')->name('admin');
+
+/* empresas */
+Route::get('/admin/formEmpresa', 'AdminController@formEmpresa');
+Route::post('/admin/cadastroEmpresa', 'AdminController@cadastroEmpresa')->name('admin.cadastro.empresa');
+
+/* certificado */
+Route::get('/admin/formCurso','CertificadoController@formCurso');
+Route::post('/admin/cadastroCurso','CertificadoController@cadastroCurso')->name('admin.cadastro.curso');

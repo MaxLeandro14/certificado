@@ -19,7 +19,6 @@ class CreateCursosCertificadosTable extends Migration
             $table->foreign('curso_id')->references('id')->on('cursos');
             $table->unsignedBigInteger('certificado_id');
             $table->foreign('certificado_id')->references('id')->on('certificados');
-            $table->float('carga', 8, 2);
             $table->timestamps();
         });
     }

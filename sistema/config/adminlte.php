@@ -107,41 +107,24 @@ return [
     */
 
     'menu' => [
-        [
-            'text' => 'search',
-            'search' => true,
-        ],
         ['header' => 'main_navigation'],
         [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
-        ],
-        [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
-        ],
-        ['header' => 'account_settings'],
-        [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
-        [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
+            'text'       => 'Empresas',
+            'icon' => 'fas fa-building',
             'submenu' => [
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'Cadastro',
+                    'url'  => '/admin/formEmpresa',
+                ],
+            ],
+        ],
+        [
+            'text'    => 'Cursos e Certificado',
+            'icon'    => 'fas fa-user-graduate',
+            'submenu' => [
+                [
+                    'text' => 'Cadastro de Curso',
+                    'url'  => '/admin/formCurso',
                 ],
                 [
                     'text'    => 'level_one',
@@ -185,6 +168,17 @@ return [
         [
             'text'       => 'information',
             'icon_color' => 'aqua',
+        ],
+        ['header' => 'Sistema'],
+        [
+            'text'       => 'Usuários',
+            'icon' => 'fas fa-users',
+            'submenu' => [
+                [
+                    'text' => 'Cadastro',
+                    'url'  => '',
+                ],
+            ],
         ],
     ],
 

@@ -18,6 +18,8 @@ class CreateCursosTable extends Migration
             $table->string('name');
             $table->unsignedBigInteger('empresa_id');
             $table->foreign('empresa_id')->references('id')->on('empresa');
+            $table->float('carga', 8, 2);
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }

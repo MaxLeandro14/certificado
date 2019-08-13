@@ -1,0 +1,10 @@
+23 de Setembro (1)
+4 Novembro (2)
+23 Dezembro (3)
+30 Dezembro (chamada)
+3 de Janeiro (final)
+
+
+não posso cadastrar empresa MASTER01
+verificar antes de cadastrar
+OBS: coloquei uma ficticia apenas para implementação
