@@ -1146,4 +1146,5 @@ throw new Error('AdminLTE requires jQuery')
   $(window).on('load', function () {
     Plugin.call($('body'));
   });
+  
 }(jQuery);

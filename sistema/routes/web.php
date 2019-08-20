@@ -26,3 +26,9 @@ Route::post('/admin/cadastroEmpresa', 'AdminController@cadastroEmpresa')->name('
 /* certificado */
 Route::get('/admin/formCurso','CertificadoController@formCurso');
 Route::post('/admin/cadastroCurso','CertificadoController@cadastroCurso')->name('admin.cadastro.curso');
+
+Route::get('/admin/formAluno','CertificadoController@formAluno');
+Route::post('/admin/cadastroAluno','CertificadoController@cadastroAluno')->name('admin.cadastro.aluno');
+
+Route::get('/admin/listaAlunoCurso','CertificadoController@listaAlunoCurso');
+Route::get('/admin/formAlunoCurso/{id}','CertificadoController@formAlunoCurso')->name('admin.cadastro.incluir.aluno');

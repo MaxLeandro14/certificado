@@ -2,33 +2,12 @@
 
 return [
 
-    /*
-    |--------------------------------------------------------------------------
-    | Title
-    |--------------------------------------------------------------------------
-    |
-    | The default title of your admin panel, this goes into the title tag
-    | of your page. You can override it per page with the title section.
-    | You can optionally also specify a title prefix and/or postfix.
-    |
-    */
-
     'title' => 'AdminLTE 2',
 
     'title_prefix' => '',
 
     'title_postfix' => '',
 
-    /*
-    |--------------------------------------------------------------------------
-    | Logo
-    |--------------------------------------------------------------------------
-    |
-    | This logo is displayed at the upper left corner of your admin panel.
-    | You can use basic HTML here if you want. The logo has also a mini
-    | variant, used for the mini side bar. Make it 3 letters or so
-    |
-    */
 
     'logo' => '<b>Admin</b>LTE',
 
@@ -123,36 +102,31 @@ return [
             'icon'    => 'fas fa-user-graduate',
             'submenu' => [
                 [
-                    'text' => 'Cadastro de Curso',
-                    'url'  => '/admin/formCurso',
-                ],
-                [
-                    'text'    => 'level_one',
-                    'url'     => '#',
+                    'text' => 'Cursos',
                     'submenu' => [
                         [
-                            'text' => 'level_two',
+                            'text' => 'Visualizar Cursos',
                             'url'  => '#',
                         ],
                         [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
+                            'text' => 'Cadastro de Curso',
+                            'url'  => '/admin/formCurso',
+                        ],
+                    ],
+                    
+                ],
+                [
+                    'text'    => 'Alunos',
+                    'submenu' => [
+                        [
+                            'text' => 'Cadastro de Aluno',
+                            'url'  => '/admin/formAluno',
                         ],
                     ],
                 ],
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'Adicionar Aluno ao Curso',
+                    'url'  => '/admin/listaAlunoCurso',
                 ],
             ],
         ],

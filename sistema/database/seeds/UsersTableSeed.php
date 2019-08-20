@@ -26,7 +26,7 @@ class UsersTableSeed extends Seeder
             'empresa' => '1'
         ]);
         Empresa::create([
-            'name'=> 'MASTER01',
+            'name'=> 'Seara',
             'ativo'=>1,
             'cnpj'=> '123456'
         ]);

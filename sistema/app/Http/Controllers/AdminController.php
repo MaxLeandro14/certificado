@@ -28,22 +28,25 @@ class AdminController extends Controller
     {
         return view('home');
     }
-    public function formEmpresa()
+    public function formEmpresa(Empresa $emp)
     {
-        return view('painel.empresas.cadastro');
+        $empresas = $emp->all();
+        return view('painel.empresas.cadastro', compact('empresas'));
     }
-    public function cadastroEmpresa(Request $req)
+    public function cadastroEmpresa(Request $req, Empresa $empre)
     { 
-        
-        $dados = $req->all();
-        $dados['ativo'] = 1;
-        if($dados['name'] != ''){
-            $form = Empresa::create($dados);
-            $req->session()->flash('msg_sucesso', 'Empresa Cadastrada!');
-            return redirect()->action('AdminController@formEmpresa')->with('msg', 'Cadastrado com Sucesso!');
+        //verificar campos antes de salvar
+        if(auth()->user()->empresa == 'MASTER01'){
+            $dados = $req->all();
+            $dados['ativo'] = 1;
+            if($dados['name'] != 'MASTER01'){
+                $form = $empre->create($dados);
+                $req->session()->flash('msg_sucesso', 'Empresa Cadastrada!');
+                return redirect()->action('AdminController@formEmpresa')->with('msg', 'Cadastrado com Sucesso!');
+            }
         }
         
-        return redirect()->action('AdminController@formEmpresa')->with('msg', 'Não foi possível cadastrar, verifique os dados e tente novamente!');
+        return redirect()->action('AdminController@formEmpresa')->with('msg', 'Sem atribuição para esse cadastro, contate o administrador!');
     }
    
 }

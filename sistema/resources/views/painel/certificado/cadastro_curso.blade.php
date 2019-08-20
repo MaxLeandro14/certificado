@@ -51,7 +51,7 @@
    <div class="row">
    	<br /> 
    	<br /> 
-   	 	<div class="col-md-9">
+   	 	<div class="col-md-12">
    	 		 @if(isset($cursos))
    	 				<div class="box">
             <div class="box-header">
@@ -64,6 +64,7 @@
                 <tr>
                   <th>Nome</th>
                   <th>Carga Horária</th>
+                  <th>Data de cadastro</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -72,6 +73,7 @@
 	                <tr>
 	                  <td>{{$curso->name}}</td>
 	                  <td>{{$curso->carga}}</td>
+                    <td>{{$curso->created_at->format('d-m-Y H:i:s')}}</td>
 	                </tr>
 	              @endforeach
            
