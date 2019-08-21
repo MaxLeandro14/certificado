@@ -32,3 +32,4 @@ Route::post('/admin/cadastroAluno','CertificadoController@cadastroAluno')->name(
 
 Route::get('/admin/listaAlunoCurso','CertificadoController@listaAlunoCurso');
 Route::get('/admin/formAlunoCurso/{id}','CertificadoController@formAlunoCurso')->name('admin.cadastro.incluir.aluno');
+Route::post('/admin/cadastroAlunoCurso/{id}','CertificadoController@cadastroAlunoCurso')->name('admin.cadastro.aluno.curso');

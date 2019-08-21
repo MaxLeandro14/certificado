@@ -8,4 +8,5 @@ class Aluno extends Model
 {
     protected $table = 'alunos';
     protected $fillable = ['name', 'email', 'cpf'];
+
 }
